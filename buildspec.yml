@@ -7,7 +7,11 @@ phases:
       - apt-get update -y
       - apt-get install -y maven
       - apt-get install -y curl
-       
+      - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+      - . ~/.nvm/nvm.sh
+      - nvm install 6.11.5
+      - node -e "console.log('Running Node.js ' + process.version)"
+      - npm install -g serverless@1.20.2      
   post_build:
     commands:
        - serverless deploy --region us-west-2 --verbose
