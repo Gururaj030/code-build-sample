@@ -5,8 +5,7 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get install curl -y
-      - curl -L https://www.npmjs.com/install.sh | sh
+      - apt-get install npm -y
       - npm install -g serverless@1.24.1     
   post_build:
     commands:
