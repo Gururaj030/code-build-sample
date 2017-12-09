@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+       - npm install -g serverless
+       - pip install pymysql
+       - pip install yaml
+       
+  post_build:
+    commands:
+       - serverless deploy --region us-west-2 --verbose
