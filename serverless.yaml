@@ -1,0 +1,28 @@
+service: ManageDatabaseUsers
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  role: arn:aws:iam::225327301834:role/HiEngServiceInfra
+  stage: Dev
+  runtime: python3.6
+  region: us-west-2
+
+package:
+  include:
+    - pymysql/**
+    - yaml/**
+
+functions:
+  CreateUsers:
+    handler: create_users.create
+    vpc:
+      securityGroupIds:
+        - sg-24c29f59
+      subnetIds:
+        - subnet-61734a28
+        - subnet-dfe80fb9
+    environment:
+      bucket: cerner-healtheintent-metricstore-dev
+      region: us-west-2
