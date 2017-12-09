@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get install npm
+      - apt-get install npm -y
       - npm install -g serverless@1.20.2      
   post_build:
     commands:
