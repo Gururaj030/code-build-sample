@@ -6,7 +6,7 @@ phases:
       - echo Entered the install phase...
       - apt-get update -y
       - apt-get install npm -y
-      - npm install -g serverless      
+      - npm install -g serverless@1.20.2      
   post_build:
     commands:
        - serverless deploy --region us-west-2 --verbose
