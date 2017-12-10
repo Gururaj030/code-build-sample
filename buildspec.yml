@@ -5,7 +5,8 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get -y install zip
+      - apt-get install zip -y
+      - apt-get install nodejs -y
       - apt-get install npm -y
       - npm update npm@latest
       - npm install -g serverless
