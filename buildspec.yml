@@ -7,8 +7,7 @@ phases:
       - apt-get update -y
       - apt-get -y install zip
       - apt-get install npm -y
-      - npm install npm -g
-      - npm install -g serverless@1.20.2 -y  
+      - npm install serverless -g -y  
   post_build:
     commands:
        - serverless deploy --region us-west-2 --verbose
