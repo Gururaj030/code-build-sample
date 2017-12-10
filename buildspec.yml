@@ -11,5 +11,5 @@ phases:
       - npm install -g serverless@1.20.2
   post_build:
     commands:
-       - npm -v
        - serverless --version
+       - serverless deploy --region us-west-2 --verbose
