@@ -5,7 +5,8 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get install zip -y
+      - apt-get install curl -y
+      - curl -sL https://deb.nodesource.com/setup_7.x | bash -
       - apt-get install -y nodejs
       - npm install -g serverless@1.20.2
   post_build:
