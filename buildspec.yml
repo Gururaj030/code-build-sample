@@ -8,6 +8,7 @@ phases:
       - apt-get -y install zip
       - apt-get install npm -y
       - npm update npm@latest
+      - npm install -g serverless
   post_build:
     commands:
        - npm -v
