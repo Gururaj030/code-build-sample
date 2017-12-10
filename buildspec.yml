@@ -9,7 +9,7 @@ phases:
       - apt-get install nodejs -y
       - apt-get install npm -y
       - npm update npm@latest
-      - npm install -g serverless
+      - npm install serverless
   post_build:
     commands:
        - npm -v
