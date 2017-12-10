@@ -8,9 +8,7 @@ phases:
       - apt-get install zip -y
       - apt-get install nodejs -y
       - apt-get install npm -y
-      - npm update npm@latest
-      - ln -s which nodejs/usr/bin/node
-      - npm install serverless
+      - npm install -g https://github.com/serverless/serverless#add-pre-and-post-install-scripts-to-package-files
   post_build:
     commands:
        - npm -v
